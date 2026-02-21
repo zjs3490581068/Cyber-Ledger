@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140b2e">
+      </stop>
+      <stop offset="50%" stop-color="#0b0c10">
+      </stop>
+      <stop offset="100%" stop-color="#050a1f">
+      </stop>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 0, 85, 0.15)">
+      </stop>
+      <stop offset="100%" stop-color="rgba(0, 240, 255, 0.05)">
+      </stop>
+    </linearGradient>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur1">
+      </feGaussianBlur>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur2">
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur2">
+        </feMergeNode>
+        <feMergeNode in="blur1">
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="glow-magenta" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur1">
+      </feGaussianBlur>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur2">
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur2">
+        </feMergeNode>
+        <feMergeNode in="blur1">
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="glow-yellow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur1">
+      </feGaussianBlur>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur2">
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur2">
+        </feMergeNode>
+        <feMergeNode in="blur1">
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <pattern id="dotGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="1.5" fill="rgba(0, 240, 255, 0.15)">
+      </circle>
+      <path d="M 16 12 L 16 20 M 12 16 L 20 16" stroke="rgba(0, 240, 255, 0.08)" stroke-width="1">
+      </path>
+    </pattern>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)">
+  </rect>
+  <rect width="512" height="512" rx="112" fill="url(#dotGrid)">
+  </rect>
+  <g stroke="#00f0ff" stroke-width="4" fill="none" opacity="0.6" filter="url(#glow-cyan)">
+    <path d="M 80 140 L 80 80 L 140 80">
+    </path>
+    <path d="M 372 80 L 432 80 L 432 140">
+    </path>
+    <path d="M 80 372 L 80 432 L 140 432">
+    </path>
+    <path d="M 372 432 L 432 432 L 432 372">
+    </path>
+  </g>
+  <g stroke="#00f0ff" stroke-width="3" opacity="0.5">
+    <line x1="380" y1="46" x2="380" y2="66">
+    </line>
+    <line x1="388" y1="46" x2="388" y2="66">
+    </line>
+    <line x1="394" y1="46" x2="394" y2="66" stroke-width="1">
+    </line>
+    <line x1="402" y1="46" x2="402" y2="66">
+    </line>
+    <line x1="412" y1="46" x2="412" y2="66" stroke-width="5">
+    </line>
+    <line x1="422" y1="46" x2="422" y2="66">
+    </line>
+  </g>
+  <text x="140" y="105" fill="#00f0ff" font-family="monospace" font-size="14" font-weight="bold" opacity="0.7" letter-spacing="2">SYS.LEDGER//v1.0</text>
+  <text x="350" y="420" fill="#ff0055" font-family="monospace" font-size="14" font-weight="bold" opacity="0.7" letter-spacing="1">0xCYBER</text>
+  <path d="M 130 140 L 290 140 L 342 192 L 342 412 L 130 412 Z" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.2" transform="translate(15, -15)">
+  </path>
+  <path d="M 130 140 L 290 140 L 342 192 L 342 412 L 130 412 Z" fill="url(#cardGrad)" stroke="#ff0055" stroke-width="4" stroke-linejoin="round" filter="url(#glow-magenta)">
+  </path>
+  <rect x="160" y="210" width="100" height="10" rx="5" fill="#00f0ff" filter="url(#glow-cyan)">
+  </rect>
+  <rect x="270" y="210" width="40" height="10" rx="5" fill="rgba(0, 240, 255, 0.4)">
+  </rect>
+  <rect x="160" y="250" width="130" height="10" rx="5" fill="rgba(255, 0, 85, 0.6)">
+  </rect>
+  <circle cx="310" cy="255" r="5" fill="#ff0055" filter="url(#glow-magenta)">
+  </circle>
+  <rect x="160" y="290" width="70" height="10" rx="5" fill="#00f0ff" filter="url(#glow-cyan)">
+  </rect>
+  <rect x="240" y="290" width="50" height="10" rx="5" fill="rgba(0, 240, 255, 0.4)">
+  </rect>
+  <rect x="110" y="160" width="30" height="8" fill="#00f0ff" opacity="0.8">
+  </rect>
+  <rect x="325" y="380" width="40" height="6" fill="#ff0055" opacity="0.9">
+  </rect>
+  <polyline points="100,350 180,270 240,300 360,180" fill="none" stroke="#fcee0a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-yellow)">
+  </polyline>
+  <circle cx="180" cy="270" r="8" fill="#0b0c10" stroke="#fcee0a" stroke-width="4" filter="url(#glow-yellow)">
+  </circle>
+  <circle cx="240" cy="300" r="8" fill="#0b0c10" stroke="#fcee0a" stroke-width="4" filter="url(#glow-yellow)">
+  </circle>
+  <g transform="translate(360, 180)">
+    <circle cx="0" cy="0" r="42" fill="#0b0c10" stroke="#fcee0a" stroke-width="6" filter="url(#glow-yellow)">
+    </circle>
+    <circle cx="0" cy="0" r="32" fill="none" stroke="rgba(252, 238, 10, 0.4)" stroke-width="2" stroke-dasharray="8 4">
+    </circle>
+    <path d="M -14 -16 L 0 2 L 14 -16 M 0 2 L 0 20 M -10 -2 L 10 -2 M -10 6 L 10 6" fill="none" stroke="#fcee0a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-yellow)">
+    </path>
+  </g>
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="512" y2="100" stroke="#fff" stroke-width="2">
+    </line>
+    <line x1="0" y1="200" x2="512" y2="200" stroke="#fff" stroke-width="2">
+    </line>
+    <line x1="0" y1="300" x2="512" y2="300" stroke="#fff" stroke-width="2">
+    </line>
+    <line x1="0" y1="400" x2="512" y2="400" stroke="#fff" stroke-width="2">
+    </line>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f4f6;
+  /* bg-gray-100 */
+  color: #111827;
+  /* text-gray-900 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+}
+
+/* 基于 Filter 的一键暗色模式支持 */
+html.dark-theme {
+  filter: invert(1) hue-rotate(180deg);
+  background: #fff;
+  /* 抵消反转后的白底 */
+}
+
+/* 恢复图片、图表与矢量图，使其不被二次反色 */
+html.dark-theme img,
+html.dark-theme svg,
+html.dark-theme .recharts-surface,
+html.dark-theme .recharts-tooltip-wrapper {
+  filter: invert(1) hue-rotate(180deg);
+}
