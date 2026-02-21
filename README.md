@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./assets/icon.svg" width="120" height="120" alt="Cyber Ledger Logo" />
   <h1>Cyber Ledger (赛博账本) v1.0.0</h1>
-  <p><strong>一款专为数字游民、极客及 AI 开发者打造的本地优先 (Local-First) 资产管理系统。</strong></p>
+  <p><strong>一款专为数字游民、极客及 AI 开发者打造的离线资产管理系统。</strong></p>
   
   <p>
     <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-18-blue.svg?style=flat-square&logo=react" alt="React" /></a>
@@ -89,7 +89,7 @@ Cyber Ledger 并非传统记账工具。它是对传统流水收支账单痛点�
 
 成品安装包生成位置：`android/app/build/outputs/apk/debug/app-debug.apk`
 
-*注：本仓库内已在根目录分发了一份编译好的预发测试包：`CyberLedger-test.apk`*
+*注：本仓库内已在根目录分发了一份编译好的预发测试包：`CyberLedger.apk`*
 
 ## 🎨 系统模块截面导览
 * **`🏠 Home` (主控台与总阀板)**：负责日常高速记账、快捷命令收纳、分类预算结转余量与核心月报开支占比雷达。

@@ -81,7 +81,7 @@ export default function Accounts({ accounts, setAccounts, transactions, setTrans
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/10 rounded-full blur-xl -ml-8 -mb-8 pointer-events-none"></div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center text-center mb-2">
-                    <p className="text-gray-400 text-sm font-medium">全局统筹净资产</p>
+                    <p className="text-gray-400 text-sm font-medium">总净资产</p>
                     <div className="flex items-baseline mb-2">
                         {formatMoney(totalAssets)}
                     </div>
@@ -90,7 +90,7 @@ export default function Accounts({ accounts, setAccounts, transactions, setTrans
 
             {/* 单张实体账户独立流水视图挂载与编辑 */}
             <section className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 mb-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 px-1">当前存活钱包</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 px-1">当前账户</h3>
                 <div className="space-y-3">
                     {dynamicAccounts.map(account => (
                         <div key={account.id} className="p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
