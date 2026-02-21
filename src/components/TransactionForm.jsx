@@ -28,11 +28,14 @@ export default function TransactionForm({ categories, accounts, autodlPrices, ap
     const isAutoDL = selectedCategory?.isAutoDL;
     const isAPI = selectedCategory?.isAPI;
 
+    // 过滤出活跃账户
+    const activeAccounts = accounts.filter(a => a.status !== 'inactive');
+
     // 初始化默认账户供选择
     useEffect(() => {
-        if (accounts.length > 0) {
-            setFromAccountId(accounts.find(a => a.type === 'standard')?.id || accounts[0].id);
-            setToAccountId(accounts.find(a => a.type === 'saving')?.id || accounts[0].id);
+        if (activeAccounts.length > 0) {
+            setFromAccountId(activeAccounts.find(a => a.type === 'standard')?.id || activeAccounts[0].id);
+            setToAccountId(activeAccounts.find(a => a.type === 'saving')?.id || activeAccounts[0].id);
         }
     }, [accounts]);
 
@@ -130,7 +133,7 @@ export default function TransactionForm({ categories, accounts, autodlPrices, ap
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">支出账户</label>
                         <select value={fromAccountId} onChange={(e) => setFromAccountId(e.target.value)} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm">
-                            {accounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
+                            {activeAccounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
                         </select>
                     </div>
                 )}
@@ -138,7 +141,7 @@ export default function TransactionForm({ categories, accounts, autodlPrices, ap
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">收入入驻账户</label>
                         <select value={toAccountId} onChange={(e) => setToAccountId(e.target.value)} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm">
-                            {accounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
+                            {activeAccounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
                         </select>
                     </div>
                 )}
@@ -147,13 +150,13 @@ export default function TransactionForm({ categories, accounts, autodlPrices, ap
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">转出账户</label>
                             <select value={fromAccountId} onChange={(e) => setFromAccountId(e.target.value)} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm">
-                                {accounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
+                                {activeAccounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
                             </select>
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">转入账户</label>
                             <select value={toAccountId} onChange={(e) => setToAccountId(e.target.value)} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm">
-                                {accounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
+                                {activeAccounts.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
                             </select>
                         </div>
                     </div>
